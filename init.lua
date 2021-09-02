@@ -1,5 +1,4 @@
 local set = require("vim_interfaces/set")
-local let = require("vim_interfaces/vars").let
 
 set("number")
 set("relativenumber")
