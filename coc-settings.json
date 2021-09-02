@@ -1,0 +1,29 @@
+{
+    "languageserver": {
+      "nim": {
+        "command": "nimlsp",
+        "args":["/home/sec/.choosenim/toolchains/nim-1.4.6"],
+        "trace.server": "messages",
+        "filetypes": ["nim"]
+      },
+
+      "crystal": {
+        "command": "crystalline",
+        "args": [
+          "--stdio"
+        ],
+        "filetypes": [
+          "crystal"
+        ]
+      },
+
+      "haskell": {
+        "command": "haskell-language-server-wrapper",
+        "args": ["--lsp"],
+        "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
+        "filetypes": ["haskell", "lhaskell"]
+      }
+
+    }
+}
+
