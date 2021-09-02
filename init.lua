@@ -9,6 +9,8 @@ set("softtabstop", 4)
 set("expandtab")
 set("mouse", "a")
 set("updatetime", 300)
+set("completeopt", "menuone,noinsert,noselect")
+set("shortmess", "filnxtToOFAc")
 
 require "plugins"
 require "mappings"

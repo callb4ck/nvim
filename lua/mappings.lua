@@ -1,7 +1,7 @@
 local noremap = require("vim_interfaces/map").map("n")
 local inoremap = require("vim_interfaces/map").map("i")
 
-noremap("ù", ":tabe$MYVIMRC<enter>")
+noremap("ù", ":tabe~/.config/nvim/<enter>")
 noremap("+", "A<esc>")
 noremap("è", "I<esc>")
 inoremap("<c-d>", "<esc>ddi")
@@ -19,7 +19,7 @@ noremap("<tab>", ":NERDTreeToggle<enter>")
 vim.cmd([[
 :command Fix ALEFix
 
-:command LiveServer Bracey
-:command StopServer BraceyStop
+:command LiveServer   Bracey
+:command StopServer   BraceyStop
 :command ReloadServer BraceyReload
 ]])
