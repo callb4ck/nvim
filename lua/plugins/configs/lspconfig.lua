@@ -1,19 +1,6 @@
 local nvim_lsp = require('lspconfig')
 local let = require("vim_interfaces/vars").let
 
-
-
-
-local servers = {
-  "rust_analyzer",
-  "nimls"
-}
-
-
-
-
-
-
 let.g("completition_matching_strategy_list", {"exact", "substring", "fuzzy"})
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -50,7 +37,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-for _, lsp in ipairs(servers) do
+for _, lsp in ipairs(require("language_server_list")) do
   nvim_lsp[lsp].setup {
     on_attach = require("completion").on_attach,
     flags = {

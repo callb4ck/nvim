@@ -11,7 +11,6 @@ Plug "ervandew/supertab"
 Plug "lukas-reineke/indent-blankline.nvim"
 
 Plug "dense-analysis/ale"
---Plug("neoclide/coc.nvim", {branch = "release"})
 Plug "sheerun/vim-polyglot"
 Plug "neovim/nvim-lspconfig"
 Plug "nvim-lua/completion-nvim"
