@@ -11,14 +11,14 @@ Plug 'ervandew/supertab'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 Plug 'dense-analysis/ale'
-Plug('neoclide/coc.nvim', { ['branch'] = 'release' })
+Plug('neoclide/coc.nvim', {branch = 'release'})
 Plug 'sheerun/vim-polyglot'
 
 
 Plug 'alaviss/nim.nvim'
 Plug 'pangloss/vim-javascript'
 Plug 'habamax/vim-godot'
-Plug('turbio/bracey.vim', {['do'] = 'npm install --prefix server' })
+Plug('turbio/bracey.vim', {["do"] = 'npm install --prefix server'}) -- do is a reserved keyword
 Plug 'cespare/vim-toml'
 
 Plug 'sainnhe/gruvbox-material'
