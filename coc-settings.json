@@ -2,7 +2,7 @@
     "languageserver": {
       "nim": {
         "command": "nimlsp",
-        "args":["/home/sec/.choosenim/toolchains/nim-1.4.6"],
+        "args":["$HOME/.choosenim/toolchains/nim-1.4.6"],
         "trace.server": "messages",
         "filetypes": ["nim"]
       },
