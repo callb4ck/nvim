@@ -15,6 +15,7 @@ Plug "sheerun/vim-polyglot"
 Plug "neovim/nvim-lspconfig"
 Plug "nvim-lua/completion-nvim"
 --Plug 'kabouzeid/nvim-lspinstall'
+Plug("neoclide/coc.nvim", {branch = "release"})
 
 Plug "pangloss/vim-javascript"
 Plug "habamax/vim-godot"
@@ -35,9 +36,10 @@ configs = {
     "nerdtree",
     "supertab",
     "theme",
-    "lspconfig"
 }
 
 for _, conf in pairs(configs) do
     require("plugins/configs/" .. conf)
 end
+
+require("plugins/configs/lspconfig")

@@ -10,15 +10,15 @@ autocmd BufNewFile,BufRead *.sh noremap <F5> :!./% ; echo ""  ; read<enter>
 autocmd BufNewFile,BufRead *.pl noremap <F5> :!perl -w % ; echo ""  ; read<enter>
 
 "autocmd BufNewFile,BufRead *.cr noremap <F5> :!shards build%; ../bin/main; echo ""; read<enter>
-autocmd BufNewFile,BufRead *.cr noremap <F5> :!crystal r %          ; echo ""; read<enter>
+autocmd BufNewFile,BufRead *.cr noremap <F5> :!crystal r --no-color %          ; echo ""; read<enter>
 
 
 autocmd BufNewFile,BufRead *.rs noremap <F5> :!cargo run ; read<enter>
 autocmd BufNewFile,BufRead *.rs noremap <F6> :!fname=$(mktemp); rustc % -o $fname; echo ""; $fname; rm $fname; read<enter>
 
-autocmd BufNewFile,BufRead *.nim noremap <F5> :!nimble run ; read<enter>
-autocmd BufNewFile,BufRead *.nim noremap <F6> :!nim r % ; echo ""; read<enter>
-autocmd BufNewFile,BufRead *.nim noremap <F6> :ALEEnableBuffer
+autocmd BufNewFile,BufRead *.nim noremap <F5> :!nimble dev ; echo ""; read<enter>
+autocmd BufNewFile,BufRead *.nim noremap <F6> :!nimble run ; echo ""; read<enter>
+autocmd BufNewFile,BufRead *.nim noremap <F7> :!nim r % ; echo ""; read<enter>
 
 autocmd BufNewFile,BufRead *.go noremap <F5> :!go run . ; echo ""; read<enter>
 autocmd BufNewFile,BufRead *.go noremap <F6> :!go run % ; echo ""; read<enter>

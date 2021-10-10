@@ -15,6 +15,7 @@ noremap("<c-p>", ":w !tee ~/tempvimfile.txt<enter>")
 noremap("<c-n>", ":tabe ~/tempvimfile.txt<enter>")
 noremap("<c-f>", ":set invnumber<enter>:set invrelativenumber<enter>")
 noremap("<tab>", ":NERDTreeToggle<enter>")
+noremap("ff", "<plug>NERDCommenterComment")
 
 vim.cmd([[
 :command Fix ALEFix
