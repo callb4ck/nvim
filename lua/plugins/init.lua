@@ -7,15 +7,24 @@ Plug "preservim/nerdcommenter"
 Plug "jiangmiao/auto-pairs"
 Plug "preservim/nerdtree"
 Plug "alvan/vim-closetag"
-Plug "ervandew/supertab"
+--Plug "ervandew/supertab"
 Plug "lukas-reineke/indent-blankline.nvim"
 
 Plug "dense-analysis/ale"
 Plug "sheerun/vim-polyglot"
 Plug "neovim/nvim-lspconfig"
-Plug "nvim-lua/completion-nvim"
+
+Plug 'hrsh7th/cmp-nvim-lsp'
+--Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
+
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
+Plug "tami5/lspsaga.nvim"
+
 --Plug 'kabouzeid/nvim-lspinstall'
-Plug("neoclide/coc.nvim", {branch = "release"})
+--Plug("neoclide/coc.nvim", {branch = "release"})
 
 Plug "pangloss/vim-javascript"
 Plug "habamax/vim-godot"
