@@ -3,7 +3,8 @@ return {
     "nimls",
     "crystalline",
     "ccls",
-    "rust_analyzer"
+    "rust_analyzer",
+    "zls",
   },
   coc = { -- Filetypes
     --"rust",

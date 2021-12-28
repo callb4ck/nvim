@@ -12,9 +12,9 @@ autocmd BufNewFile,BufRead *.pl noremap <F5> :!perl -w % ; echo ""  ; read<enter
 "autocmd BufNewFile,BufRead *.cr noremap <F5> :!shards build%; ../bin/main; echo ""; read<enter>
 autocmd BufNewFile,BufRead *.cr noremap <F5> :!crystal r --no-color %          ; echo ""; read<enter>
 
-
 autocmd BufNewFile,BufRead *.rs noremap <F5> :!cargo run ; read<enter>
 autocmd BufNewFile,BufRead *.rs noremap <F6> :!fname=$(mktemp); rustc % -o $fname; echo ""; $fname; rm $fname; read<enter>
+autocmd BufNewFile,BufRead *.rs noremap <F8> :!cargo clippy --fix; read<enter>
 
 autocmd BufNewFile,BufRead *.nim noremap <F5> :!nimble dev ; echo ""; read<enter>
 autocmd BufNewFile,BufRead *.nim noremap <F6> :!nimble run ; echo ""; read<enter>

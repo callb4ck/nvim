@@ -1,4 +1,5 @@
 local set = require("vim_interfaces/set")
+local let = require("vim_interfaces/vars").let
 
 set("number")
 set("relativenumber")
@@ -11,6 +12,8 @@ set("mouse", "a")
 set("updatetime", 300)
 set("completeopt", "menuone,noinsert,noselect")
 set("shortmess", "filnxtToOFAc")
+
+let.g("mapleader", ",")
 
 require "plugins"
 require "mappings"
