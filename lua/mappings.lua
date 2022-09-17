@@ -4,6 +4,8 @@ local inoremap = require("vim_interfaces/map").map("i", true)
 local lua_nnoremap = require("vim_interfaces/map").luamap("n", false)
 local lua_vnoremap = require("vim_interfaces/map").luamap("v", false)
 
+local command = vim.api.nvim_create_user_command
+
 nnoremap("ù", ":tabe~/.config/nvim/<enter>")
 nnoremap("+", "A<esc>")
 nnoremap("è", "I<esc>")
@@ -23,12 +25,11 @@ nnoremap("ff", "<plug>NERDCommenterComment")
 lua_nnoremap("K", "require('lspsaga.hover').render_hover_doc()")
 lua_nnoremap("<c-k>", "require('lspsaga.provider').preview_definition()")
 
-vim.cmd([[
-:command Fix ALEFix
+command("RustDebug", [[:tabe term123@@ | :terminal cargo build; rust-lldb ./target/debug/$(awk -F= '/\#.*lldb-bin/ {gsub(" ", ""); gsub("\"", ""); gsub(/\#.*/, ""); print $2 }' Cargo.toml)]], {})
 
-:command Rename lua require('lspsaga.rename').rename()
+command("Fix", "ALEFix", {})
+command("Rename", "lua require('lspsaga.rename').rename()", {})
 
-:command LiveServer   Bracey
-:command StopServer   BraceyStop
-:command ReloadServer BraceyReload
-]])
+command("LiveServer", "Bracey", {})
+command("StopServer", "BraceyStop", {})
+command("ReloadServer", "BraceyReload", {})
